@@ -6,10 +6,6 @@ class Kpop < Formula
   sha256 "1ed1f832baa759f9dfb53dc362fd6b1f2ee21a7e88cd8c75a1d77a204be5cc92"
 
   def install
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}"
-    system "make", "install"
+    bin.install 'kpop'
   end
 end
